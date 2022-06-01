@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TelegramController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('telegramView');
 });
+
+
+Route::get('/updated-activity', [TelegramController::class ,'updatedActivity'] );
+
+
+Route::get('/', [TelegramController::class ,'sendMessage'] );
+
+Route::post('/send-message', [TelegramController::class ,'storeMessage'] );
+
+
+Route::post('/store-photo', [TelegramController::class ,'storePhoto'] );
