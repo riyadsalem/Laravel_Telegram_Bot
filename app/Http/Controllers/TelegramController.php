@@ -34,7 +34,7 @@ class TelegramController extends Controller
         $text =  "<b>Name: </b>\n" . "$request->name\n" . "<b>Message: </b>\n" . $request->message;
 
         Telegram::sendMessage([
-            'chat_id' => '-1001778709092',
+            'chat_id' => '',
             'parse_mode' => 'HTML',
             'text' => $text
         ]);
@@ -53,7 +53,7 @@ class TelegramController extends Controller
         $photo = $request->file('file');
 
         Telegram::sendPhoto([
-            'chat_id' => '-1001778709092',
+            'chat_id' => '',
             'photo' => InputFile::createFromContents(file_get_contents($photo->getRealPath()), hexdec(10) . '.' . $photo->getClientOriginalExtension()),
             'caption' => 'Photo Image'
         ]);
