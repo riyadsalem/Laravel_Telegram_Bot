@@ -34,9 +34,9 @@ return [
     'bots'                         => [
         'mybot' => [
             'username'            => 'RiyadMBot',
-            'token'               => env('TELEGRAM_BOT_TOKEN', '5436860040:AAFITA0xGOzgBcmyb1Ghv7HznfempgqBg4g'),
-            'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR-CERTIFICATE-PATH'),
-            'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', 'YOUR-BOT-WEBHOOK-URL'),
+            'token'               => env('TELEGRAM_BOT_TOKEN', ':),
+            'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', ''),
+            'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', ''),
             'commands'            => [
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
                 //https://api.telegram.org/bot5436860040:AAFITA0xGOzgBcmyb1Ghv7HznfempgqBg4g/getMe
@@ -45,7 +45,7 @@ return [
 
         //        'mySecondBot' => [
         //            'username'  => 'AnotherTelegram_Bot',
-        //            'token' => '123456:abc',
+        //            'token' => '',
         //        ],
     ],
 
